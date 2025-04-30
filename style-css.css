@@ -1,0 +1,216 @@
+/* STYLES GENERAUX */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif; /* Police par défaut */
+}
+
+body {
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.6;
+    background-color: #f4f4f4; /* Fond gris clair pour le corps de la page */
+    color: #333; /* Couleur du texte par défaut */
+    position: relative; /* Pour positionner les motifs */
+}
+
+/* Apparence des liens */
+a {
+    text-decoration: none; /* Supprime la décoration des liens */
+    color: steelblue; /* Couleur du texte des liens */
+}
+
+a:hover {
+    text-decoration: underline; /* Sous-ligne les liens au survol */
+    font-weight: bold; /* Met les liens en gras au survol */
+}
+
+/* Titres */
+h1, h2 {
+    color: #008080; /* Couleur des titres, même teinte que le fond de la colonne de gauche */
+    text-align: left; /* Alignement des titres à gauche */
+    margin-bottom: 1rem; /* Espacement sous les titres */
+    letter-spacing: 1px; /* Espacement des lettres */
+}
+
+h1 {
+    font-size: 2rem; /* Taille du titre principal */
+    text-transform: uppercase; /* Met les lettres en majuscules */
+    margin-bottom: 0.5rem; /* Espacement sous le titre principal */
+    font-weight: bold; /* Met le titre principal en gras */
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
+}
+
+h2 {
+    font-size: 1.5rem; /* Taille des titres secondaires */
+    text-transform: uppercase; /* Met les lettres en majuscules */
+    font-weight: normal; /* Le titre secondaire est normal */
+}
+
+/* Mise en évidence du nom */
+.en-tête h1 {
+    font-size: 2rem; /* Ajuste la taille du titre principal */
+    color: #008080; /* Couleur du titre */
+    font-weight: bold; /* Met le titre en gras */
+    text-align: center; /* Centre le texte du titre */
+    margin-bottom: 20px; /* Ajoute un espacement sous le titre */
+}
+
+/* Sections */
+.section {
+    margin-bottom: 2rem; /* Marge sous chaque section */
+    padding: 1rem;
+    background-color: #ffffff; /* Fond blanc des sections */
+    border-radius: 8px; /* Bord arrondi pour un effet doux */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée pour les sections */
+    color: #333; /* Couleur du texte dans les sections */
+}
+
+.section ul {
+    list-style: none; /* Enlève les puces des listes */
+}
+
+.section ul li {
+    padding: 0.5rem 0; /* Ajoute de l'espace entre les éléments de liste */
+}
+
+/* Justification du texte dans l'encadré "À propos" */
+.colonne-gauche .section p {
+    text-align: justify; /* Justifie le texte */
+}
+
+/* Mise en évidence des liens internes */
+.texte-bleu {
+    color: steelblue; /* Couleur spécifique pour le texte bleu */
+}
+
+/* Ajout de l'effet hover sur les éléments */
+.section:hover {
+    transform: translateY(-5px); /* Déplacement léger lors du survol */
+    transition: transform 0.3s ease-in-out; /* Effet de transition fluide */
+}
+
+/* Structure en 2 colonnes */
+.cv-container {
+    display: grid;
+    grid-template-columns: 35% 60%; /* Deux colonnes avec une largeur ajustée */
+    gap: 30px; /* Espacement entre les colonnes */
+    grid-template-areas: "left-column right-column"; /* Définit la disposition */
+    width: 1200px; /* Largeur maximale de la page */
+    margin: 50px auto; /* Centrer la page horizontalement avec une marge verticale */
+    background-color: #ffffff; /* Fond blanc pour le conteneur */
+    padding: 30px; /* Ajoute de l'espace autour du contenu */
+    border-radius: 12px; /* Bord arrondi pour l'effet esthétique */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Ombre portée pour ajouter de la profondeur */
+    position: relative; /* Pour positionner les motifs */
+}
+
+/* Colonne de gauche */
+.colonne-gauche {
+    grid-area: left-column; /* Définit la position de la colonne gauche */
+    padding: 30px; /* Ajoute de l'espace autour du contenu */
+    background-color: #008080; /* Fond bleu clair */
+    color: white; /* Texte blanc pour contraster avec le fond bleu */
+    border-radius: 8px; /* Bord arrondi de la colonne */
+}
+
+/* Centrage de la photo */
+.colonne-gauche img.portrait {
+    display: block; /* Affiche l'image comme un bloc */
+    margin: 0 auto; /* Centre l'image horizontalement */
+    width: 150px; /* Largeur de l'image */
+    height: 150px; /* Hauteur de l'image */
+    border-radius: 50%; /* Transformation en cercle */
+    object-fit: cover; /* Permet à l'image de s'ajuster sans se déformer */
+    margin-bottom: 1rem; /* Espacement sous l'image */
+    border: 4px solid #fff; /* Bordure blanche autour de l'image */
+    object-position: center; /* Centre l'image dans le cercle */
+}
+
+/* Colonne de droite */
+.colonne-droite {
+    grid-area: right-column; /* Définit la position de la colonne droite */
+    padding: 30px; /* Ajoute de l'espace autour du contenu */
+}
+
+/* Ajout d'un effet d'ombre pour la colonne de droite */
+.colonne-droite .section {
+    margin-bottom: 2rem; /* Espacement entre les sections */
+    background-color: #fff; /* Fond blanc pour les sections */
+    border-radius: 8px; /* Bord arrondi des sections */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée pour les sections */
+    color: #333; /* Couleur du texte dans les sections */
+}
+
+/* Ajout d'une marge avant les titres */
+.colonne-droite h2,
+.colonne-gauche h2 {
+    margin-top: 2rem; /* Marge avant les titres */
+}
+
+/* Liste des compétences et centres d'intérêt */
+.competence-liste, .centresinteret-liste, .langue-liste {
+    margin-left: 1.5rem; /* Décale les listes vers la droite */
+}
+
+.competence-liste li, .centresinteret-liste li, .langue-liste li {
+    margin-bottom: 0.5rem; /* Espacement entre les éléments de liste */
+}
+
+/* Liens */
+a {
+    color: steelblue; /* Couleur des liens */
+}
+
+a:hover {
+    color: #005f6b; /* Couleur des liens au survol */
+}
+
+/* Ajouter des bordures aux boutons */
+button {
+    border: 2px solid steelblue; /* Bordure bleue autour du bouton */
+    background-color: transparent; /* Fond transparent pour le bouton */
+    color: steelblue; /* Texte du bouton bleu */
+    padding: 10px 20px; /* Espace interne du bouton */
+    font-size: 1rem; /* Taille de la police du bouton */
+    cursor: pointer; /* Curseur en forme de main */
+    border-radius: 5px; /* Bord arrondi du bouton */
+    transition: background-color 0.3s ease; /* Transition pour le changement de fond */
+}
+
+button:hover {
+    background-color: steelblue; /* Fond bleu au survol */
+    color: white; /* Texte blanc au survol */
+}
+
+/* Motifs décoratifs */
+.motif {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(34,193,195,1) 0%, rgba(255,255,255,0) 70%);
+    z-index: -1; /* Pour placer les motifs derrière le contenu */
+}
+
+.top-left {
+    top: -50px;
+    left: -50px;
+    transform: rotate(180deg);
+}
+
+.top-right {
+    top: -50px;
+    right: -50px;
+}
+
+.bottom-left {
+    bottom: -50px;
+    left: -50px;
+    transform: rotate(180deg);
+}
+
+.bottom-right {
+    bottom: -50px;
+    right: -50px;
+}
